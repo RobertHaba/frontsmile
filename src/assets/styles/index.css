@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.gradient {
+    background-color: #FEC260;
+    background: linear-gradient(92.09deg, #FEC260 -6.12%, #A12568 125.54%);
+}
+
+.text-gradient {
+    color: #FEC260;
+    background: linear-gradient(92.09deg, #FEC260 -6.12%, #A12568 125.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inset-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
