@@ -1,0 +1,55 @@
+{
+    "projects": [{
+            "id": 0,
+            "title": "ChatApp",
+            "subtitle": "Aplikacja do czatowania",
+            "technologies": "HTML, CSS, JS, Vue, Vuex, Supabase",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque veniam vitae dolore! Possimus qui sunt ab animi laborum cum commodi fugiat quod illo exercitationem quas, iste eius, quasi ea!",
+            "linkLive": "#",
+            "linkCode": "#",
+            "image": "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/build-a-blog-with-vue-strapi-and-apollo_9994233d8a.png",
+            "isNew": true
+        },
+        {
+            "id": 1,
+            "title": "Gwarancyjka",
+            "subtitle": "Aplikacja do czatowania",
+            "technologies": "HTML, CSS, JS, Vue, Vuex, Supabase",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque veniam vitae dolore! Possimus qui sunt ab animi laborum cum commodi fugiat quod illo exercitationem quas, iste eius, quasi ea!",
+            "linkLive": "#",
+            "linkCode": "#",
+            "image": "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/build-a-blog-with-vue-strapi-and-apollo_9994233d8a.png"
+        },
+        {
+            "id": 2,
+            "title": "RocketOS",
+            "subtitle": "Aplikacja do czatowania",
+            "technologies": "HTML, CSS, JS, Vue, Vuex, Supabase",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque veniam vitae dolore! Possimus qui sunt ab animi laborum cum commodi fugiat quod illo exercitationem quas, iste eius, quasi ea!",
+            "linkLive": "#",
+            "linkCode": "#",
+            "image": "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/build-a-blog-with-vue-strapi-and-apollo_9994233d8a.png"
+        },
+        {
+            "id": 3,
+            "title": "RocketOS",
+            "subtitle": "Aplikacja do czatowania",
+            "technologies": "HTML, CSS, JS, Vue, Vuex, Supabase",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque veniam vitae dolore! Possimus qui sunt ab animi laborum cum commodi fugiat quod illo exercitationem quas, iste eius, quasi ea!",
+            "linkLive": "#",
+            "linkCode": "#",
+            "image": "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/build-a-blog-with-vue-strapi-and-apollo_9994233d8a.png"
+        },
+        {
+            "id": 4,
+            "title": "RocketOS",
+            "subtitle": "Aplikacja do czatowania",
+            "technologies": "HTML, CSS, JS, Vue, Vuex, Supabase",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque veniam vitae dolore! Possimus qui sunt ab animi laborum cum commodi fugiat quod illo exercitationem quas, iste eius, quasi ea!",
+            "linkLive": "#",
+            "linkCode": "#",
+            "image": "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/build-a-blog-with-vue-strapi-and-apollo_9994233d8a.png"
+        }
+
+    ]
+}

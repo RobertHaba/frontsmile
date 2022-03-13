@@ -1,3 +1,8 @@
+.smile-line {
+    position: relative;
+    width: fit-content;
+}
+
 .smile-line::before {
     content: '';
     position: absolute;
@@ -8,4 +13,19 @@
     background-image: url('../icons/smile.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+}
+
+.icon {
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon--happy {
+    background-image: url('../icons/happy.svg');
+}
+
+.icon--html {
+    background-image: url('../icons/html.svg');
 }
