@@ -1,7 +1,7 @@
 <template>
-  <section class="p-8 mt-8 flex justify-center" id="about">
+  <section class="xl:p-8 mt-8 flex justify-center" id="about">
     <div
-      class="container grid w-full grid-cols-2 py-12 gap-8 bg-dark rounded-2xl"
+      class="container grid w-full grid-rows-auto xl:grid-rows-1 xl:grid-cols-2 px-8 py-12 gap-8 bg-white-second dark:bg-dark rounded-2xl shadow-sm dark:shadow-xl"
     >
       <div class="w-full max-w-md justify-self-center">
         <HomeTitle titleTextSmile="O mnie" />
@@ -20,11 +20,11 @@
           nóg odgrywają ręce ;)
         </p>
       </div>
-      <div class="w-full max-w-lg grid items-center">
-        <div class="grid grid-cols-2 grid-rows-2 gap-4">
-          <div class="bg-dark-light rounded-2xl p-4">
+      <div class="w-full max-w-lg grid justify-self-center items-center">
+        <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 gap-4">
+          <div class="bg-white dark:bg-dark-light rounded-2xl p-4">
             <h3 class="mb-4 font-bold">
-              <span class="smile-line">Zainteresowania</span>
+              Zainteresowania
             </h3>
             <p class="opacity-80 text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -32,9 +32,11 @@
             </p>
           </div>
           <div
-            class="col-start-2 row-start-1 row-end-3 grid grid-rows-5 bg-dark-light rounded-2xl p-4"
+            class="order-first md:col-start-2 md:row-start-1 md:row-end-3 grid md:grid-rows-5 bg-white dark:bg-dark-light rounded-2xl p-4"
           >
-            <div class="bg-main w-full row-span-2"></div>
+            <div class="bg-main w-full row-span-2 rounded-2xl">
+              <img class="rounded-2xl" src="../../assets/img/me.jpg" alt="">
+            </div>
             <div class="row-span-3 mt-4">
               <p class="font-bold">Robert Hapka</p>
               <ul>
@@ -43,9 +45,9 @@
               </ul>
             </div>
           </div>
-          <div class="bg-dark-light rounded-2xl p-4">
+          <div class="bg-white dark:bg-dark-light rounded-2xl p-4">
             <h3 class="mb-4 font-bold">
-              <span class="smile-line">Zainteresowania</span>
+              Zainteresowania
             </h3>
             <p class="opacity-80 text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,8 +1,8 @@
 <template>
-  <section class="w-full flex justify-center mt-4">
-    <div class="container p-4 grid grid-cols-2 gap-8">
+  <section class="w-full flex justify-center mt-4 text-white">
+    <div class="container xl:p-4 grid grid-rows-2 xl:grid-rows-none  xl:grid-cols-2 gap-8">
       <div
-        class="bg-second w-full max-w-lg justify-self-center flex justify-center rounded-2xl py-8"
+        class="bg-second w-full max-w-lg justify-self-center flex justify-center rounded-2xl p-8 shadow-sm dark:shadow-xl"
       >
         <div class="max-w-md">
           <h2 class="text-2xl font-bold mb-2">Technologie - programowanie</h2>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div
-        class="bg-second w-full max-w-lg justify-self-center flex justify-center rounded-2xl py-8"
+        class="bg-second w-full max-w-lg justify-self-center flex justify-center rounded-2xl p-8 shadow-sm dark:shadow-xl"
       >
         <div class="max-w-md">
           <h2 class="text-2xl font-bold mb-2">Technologie - programowanie</h2>
