@@ -46,6 +46,18 @@
     background-image: url('../icons/github.svg');
 }
 
+.icon--ohmydev {
+    background-image: url('../icons/logo-ohmydev.svg');
+}
+
+.icon--youtube {
+    background-image: url('../icons/logo-youtube.svg');
+}
+
+.icon--spy {
+    background-image: url('../icons/spy.svg');
+}
+
 .f-animate-moving {
     animation: moving 3s infinite;
 }

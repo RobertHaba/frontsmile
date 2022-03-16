@@ -1,0 +1,103 @@
+{
+    "desgin": [{
+            "id": 0,
+            "title": "Voucher do druku 0",
+            "URL": "src/assets/img/article.png",
+            "palette": [
+                "#FFFFFF",
+                "#ABC000",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Baner do social media",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Voucher do druku 2",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Voucher do druku 3",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Voucher do druku 4",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Voucher do druku 5",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Voucher do druku 6",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Voucher do druku 7",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Voucher do druku 8",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Voucher do druku 9",
+            "URL": "src/assets/img/obsluga.jpg",
+            "palette": [
+                "#ABC000",
+                "#FFFFFF",
+                "#D988AB"
+            ]
+        }
+    ]
+}

@@ -6,6 +6,7 @@
     <HomeTechnology />
     <HomeProjects />
     <HomeSocial />
+    <HomeDesign />
   </div>
 </template>
 
@@ -16,6 +17,8 @@ import HomeAbout from '../components/home/HomeAbout.vue';
 import HomeTechnology from '../components/home/HomeTechnology.vue';
 import HomeProjects from '../components/home/HomeProjects.vue';
 import HomeSocial from '../components/home/HomeSocial.vue';
+import HomeDesign from '../components/home/HomeDesign.vue';
+
 
 
 export default {
@@ -25,7 +28,8 @@ export default {
     HomeAbout,
     HomeTechnology,
     HomeProjects,
-    HomeSocial
+    HomeSocial,
+    HomeDesign
   },
   setup() {
     return {};
