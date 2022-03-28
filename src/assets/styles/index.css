@@ -1,6 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    .bottom-none {
+        bottom: unset;
+    }
+    .bg-none {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .icon {
+        display: block;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .icon--logo {
+        background-image: url('../logo.svg');
+    }
+    .icon--logo-dark {
+        background-image: url('../logo-dark.svg');
+    }
+    .icon--logo-small {
+        background-image: url('../logo-small.svg');
+    }
+    .icon--logo-dark-small {
+        background-image: url('../logo-dark-small.svg');
+    }
+}
+
 :root {
     --color-bg: #FFF;
 }

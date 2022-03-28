@@ -1,0 +1,21 @@
+{
+    "articles": [{
+        "id": 0,
+        "cardTitle": "blog",
+        "title": "Od Bejbika do Juniora - RocketOS w wersji BETA #3",
+        "shortDescription": "System RocketOS dostępny do testu 🥳 Czym jest RocketOS? 🤔 Jest to aplikacja napisana w Vue imitująca system operacyjny, która działa w trybie online. Główna zaleta to możliwość używania jednego konta na wielu urządzeniach z zachowaniem danych.",
+        "tags": "HTML, CSS, JS, Vue, FireBase",
+        "URL": "https://ohmydev.pl/post/od-bejbika-do-juniora-rocketos-w-wersji-beta-3-3dbk",
+        "thumbnail": "https://imgproxy.ohmydev.pl/uFR_EdzkiSNiwQFmRsZcsFka1f8aoixEa4bF6jOIoJU/pr:post_main/plain/https://bucket.ohmydev.pl/images/posts/7006577c97a3e2616e7523362ed68c18.png"
+
+    }, {
+        "id": 1,
+        "cardTitle": "filmik",
+        "title": "Od Bejbika do Juniora - RocketOS w wersji BETA #3",
+        "shortDescription": "System RocketOS dostępny do testu 🥳 Czym jest RocketOS? 🤔 Jest to aplikacja napisana w Vue imitująca system operacyjny, która działa w trybie online. Główna zaleta to możliwość używania jednego konta na wielu urządzeniach z zachowaniem danych.",
+        "tags": "HTML, CSS, JS, Vue, FireBase",
+        "URL": "https://ohmydev.pl/post/od-bejbika-do-juniora-rocketos-w-wersji-beta-3-3dbk",
+        "thumbnail": "https://imgproxy.ohmydev.pl/uFR_EdzkiSNiwQFmRsZcsFka1f8aoixEa4bF6jOIoJU/pr:post_main/plain/https://bucket.ohmydev.pl/images/posts/7006577c97a3e2616e7523362ed68c18.png"
+
+    }]
+}

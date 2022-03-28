@@ -1,9 +1,11 @@
-.smile-line {
+.smile-line,
+.smile-line-white {
     position: relative;
     width: fit-content;
 }
 
-.smile-line::before {
+.smile-line::before,
+.smile-line-white::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -15,11 +17,8 @@
     background-size: 100%;
 }
 
-.icon {
-    display: block;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+.smile-line-white::before {
+    background-image: url('../icons/smile-white.svg');
 }
 
 .icon--happy {
@@ -30,6 +29,14 @@
     background-image: url('../icons/html.svg');
 }
 
+.icon--user {
+    background-image: url('../icons/user.svg');
+}
+
+.icon--apps {
+    background-image: url('../icons/apps.svg');
+}
+
 .icon--sun {
     background-image: url('../icons/sun.svg');
 }
@@ -38,8 +45,32 @@
     background-image: url('../icons/moon.svg');
 }
 
+.icon--mail {
+    background-image: url('../icons/mail.svg');
+}
+
+.icon--phone {
+    background-image: url('../icons/phone.svg');
+}
+
+.icon--download {
+    background-image: url('../icons/download.svg');
+}
+
 .icon--linkedin {
     background-image: url('../icons/linkedin.svg');
+}
+
+.icon--send {
+    background-image: url('../icons/send.svg');
+}
+
+.icon--briefcase {
+    background-image: url('../icons/briefcase.svg');
+}
+
+.icon--briefcase-purple {
+    background-image: url('../icons/briefcase-purple.svg');
 }
 
 .icon--github {
@@ -54,6 +85,14 @@
     background-image: url('../icons/logo-youtube.svg');
 }
 
+.icon--youtube-black {
+    background-image: url('../icons/youtube-black.svg');
+}
+
+.icon--menu-burger {
+    background-image: url('../icons/menu-burger.svg');
+}
+
 .icon--spy {
     background-image: url('../icons/spy.svg');
 }
@@ -66,6 +105,14 @@
     box-shadow: 0 2px 25px #A12568;
 }
 
+.navbar-shadow {
+    box-shadow: 0px 0px 8px 1px rgba(47, 50, 73, 0.5);
+}
+
+.f-animate-slide-to-top {
+    animation: slideToTop 1s forwards;
+}
+
 @keyframes moving {
     0%,
     100% {
@@ -73,6 +120,15 @@
     }
     50% {
         transform: translate(2%, 2%);
+    }
+}
+
+@keyframes slideToTop {
+    0% {
+        bottom: -100vh;
+    }
+    100% {
+        bottom: 100%;
     }
 }
 

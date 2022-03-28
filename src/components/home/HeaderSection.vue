@@ -211,7 +211,7 @@
         <p class="font-bold xl:text-7xl text-5xl">Hej, tu Haba</p>
         <h1 class="relative font-bold xl:text-4xl text-2xl">
           a to jest Frontend ze
-          <span class="block dark:text-gradient smile-line">Smilem</span>
+          <span class="block dark:text-gradient smile-line-white" >Smilem</span>
         </h1>
       </div>
     </div>
@@ -222,8 +222,11 @@
     <div
       class="container flex flex-wrap xl:flex-nowrap gap-8 mx-auto justify-center xl:justify-between items-stretch xl:px-8"
     >
-      <HomeArticle />
-      <HomeArticle />
+      <HomeArticle
+        v-for="article in articles"
+        :key="article.id"
+        :articleData="article"
+      />
       <div
         class="flex flex-col gap-8 justify-between w-full max-w-md xl:max-w-sm rounded-2xl p-6 bg-white-second dark:bg-dark shadow-sm dark:shadow-xl"
       >
@@ -233,7 +236,7 @@
           <strong>Twój!</strong>
         </p>
         <button
-          class="relative w-full flex justify-center items-center gap-1 rounded-xl bg-second text-white button-shadow px-4 py-2 confetti-button z-10"
+          class="relative w-full flex justify-center items-center gap-1 rounded-xl bg-second text-white button-shadow px-4 py-2 confetti-button z-10 hover:animate-pulse"
           :class="{ animate: animateButton }"
           @click="animateButton = true"
         >
@@ -248,14 +251,16 @@
 <script>
 import { ref } from '@vue/reactivity';
 import HomeArticle from './HomeArticle.vue';
-
+import articlesData from '../../data/article.json';
 export default {
   components: {
     HomeArticle,
+    articlesData,
   },
   setup() {
     const animateButton = ref(false);
-    return { animateButton };
+    const articles = articlesData.articles;
+    return { animateButton, articles };
   },
 };
 </script>

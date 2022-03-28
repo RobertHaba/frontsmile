@@ -1,102 +1,140 @@
 {
     "desgin": [{
             "id": 0,
-            "title": "Voucher do druku 0",
-            "URL": "src/assets/img/article.png",
+            "title": "Plakat - Facebook",
+            "URL": "src/assets/img/serwisman-hot-sale.png",
             "palette": [
+                "#1E1E1E",
                 "#FFFFFF",
-                "#ABC000",
-                "#D988AB"
+                "#FF8800"
             ]
         },
         {
             "id": 1,
-            "title": "Baner do social media",
+            "title": "Plakat - Facebook",
             "URL": "src/assets/img/obsluga.jpg",
             "palette": [
-                "#ABC000",
-                "#FFFFFF",
-                "#D988AB"
+                "#F5F5F5",
+                "#271F17",
+                "#FF8800"
             ]
         },
         {
             "id": 2,
-            "title": "Voucher do druku 2",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Voucher do druku",
+            "URL": "src/assets/img/szkolenia-voucher.jpg",
             "palette": [
-                "#ABC000",
+                "#FF8800",
                 "#FFFFFF",
-                "#D988AB"
+                "#414159"
             ]
         },
         {
             "id": 3,
-            "title": "Voucher do druku 3",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Plakat - Facebook",
+            "URL": "src/assets/img/szkolenia-plakat.png",
             "palette": [
-                "#ABC000",
-                "#FFFFFF",
-                "#D988AB"
+                "#322F49",
+                "#414159",
+                "#FF8800"
             ]
         },
         {
             "id": 4,
-            "title": "Voucher do druku 4",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Plakat - Facebook",
+            "URL": "src/assets/img/szkolenia-plakat-2.png",
             "palette": [
-                "#ABC000",
-                "#FFFFFF",
-                "#D988AB"
+                "#322F49",
+                "#414159",
+                "#FF8800"
             ]
         },
         {
             "id": 5,
-            "title": "Voucher do druku 5",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Baner do druku",
+            "URL": "src/assets/img/serwisman-baner.jpg",
             "palette": [
-                "#ABC000",
-                "#FFFFFF",
-                "#D988AB"
+                "#FF8800",
+                "#333B48",
+                "#FFFFFF"
             ]
-        },
-        {
+        }, {
             "id": 6,
-            "title": "Voucher do druku 6",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Miniaturka - YouTube",
+            "URL": "src/assets/img/article.png",
             "palette": [
-                "#ABC000",
-                "#FFFFFF",
-                "#D988AB"
+                "#222538",
+                "#A12568",
+                "#FEC260"
             ]
         },
         {
             "id": 7,
-            "title": "Voucher do druku 7",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Tło - Facebook",
+            "URL": "src/assets/img/serwisman-baner-facebook.png",
             "palette": [
-                "#ABC000",
-                "#FFFFFF",
-                "#D988AB"
+                "#FF8800",
+                "#FFFFFF"
             ]
         },
         {
             "id": 8,
-            "title": "Voucher do druku 8",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Baner - Allegro",
+            "URL": "src/assets/img/serwisman-allegro-baner.png",
             "palette": [
-                "#ABC000",
                 "#FFFFFF",
-                "#D988AB"
+                "#FF8800",
+                "#415A6B"
             ]
         },
         {
             "id": 9,
-            "title": "Voucher do druku 9",
-            "URL": "src/assets/img/obsluga.jpg",
+            "title": "Voucher do druku",
+            "URL": "src/assets/img/serwisman-voucher.png",
             "palette": [
-                "#ABC000",
+                "#333B49",
                 "#FFFFFF",
-                "#D988AB"
+                "#FF8800"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Miniaturka - Facebook",
+            "URL": "src/assets/img/bem.png",
+            "palette": [
+                "#222538",
+                "#FFFFFF",
+                "#E11D7B"
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Plakat do druku",
+            "URL": "src/assets/img/szkolenia-plakat-zajecia.png",
+            "palette": [
+                "#3C69DE",
+                "#FF8800",
+                "#FFFFFF"
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Miniaturka - YouTube",
+            "URL": "src/assets/img/css.png",
+            "palette": [
+                "#E4E4E4",
+                "#F57190",
+                "#000000"
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Miniaturka - YouTube",
+            "URL": "src/assets/img/flip-card.png",
+            "palette": [
+                "#FF3364",
+                "#E4E4E4",
+                "#171717"
             ]
         }
     ]
