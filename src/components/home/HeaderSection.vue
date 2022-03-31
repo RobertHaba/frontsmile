@@ -1,6 +1,6 @@
 <template>
   <header
-    class="relative mt-20 w-full xl:h-[60vh] h-[calc(90vh-6rem)] flex justify-center xl:p-8"
+    class="relative mt-4 sm:mt-20 w-full xl:h-[60vh] h-[calc(90vh-6rem)] flex justify-center xl:p-8"
   >
     <div
       class="container h-full grid grid-rows-2 xl:grid-rows-none xl:grid-cols-2 items-center justify-center xl:justify-evenly xl:gap-8 p-8 bg-main rounded-2xl shadow-xl"

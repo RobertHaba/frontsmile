@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-8 flex justify-center h-auto" id="projects">
+  <footer class="mb-16 mt-8 flex justify-center h-auto" id="projects">
     <div
       class="container flex flex-col items-center gap-12 px-4 xl:p-12 py-12 bg-second rounded-2xl shadow-sm dark:shadow-xl"
     >

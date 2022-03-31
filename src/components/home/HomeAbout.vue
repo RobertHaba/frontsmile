@@ -60,7 +60,7 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-wrap gap-4 justify-between">
+        <div class="flex flex-wrap gap-6 sm:gap-4 justify-center sm:justify-between mt-8 ">
           <a
             href="#"
             class="flex items-center gap-4 w-fit px-8 py-2 bg-second text-white rounded-xl hover:animate-pulse"

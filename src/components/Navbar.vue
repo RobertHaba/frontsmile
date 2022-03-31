@@ -1,62 +1,71 @@
 <template>
   <div
-    class="fixed bottom-0 sm:bottom-none sm:top-0 w-full flex justify-center inset-center z-20 bg bg-white dark:bg-dark"
+    class="sm:bottom-none inset-center bg fixed bottom-0 z-[2147483645] flex w-full justify-center bg-white dark:bg-dark sm:top-0"
     :class="{
-      'drop-shadow-2xl sm:drop-shadow-xl sm:bg-white sm:dark:bg-dark': isScrollMove,
+      'drop-shadow-2xl sm:bg-white sm:drop-shadow-xl sm:dark:bg-dark':
+        isScrollMove,
     }"
     id="navbar"
   >
     <div
-      class="container h-16 sm:h-20 flex items-center justify-between pl-8 pr-4 sm:px-4 gap-6 sm:gap-4"
+      class="container flex h-16 items-center justify-between gap-6 pl-8 pr-4 sm:h-20 sm:gap-4 sm:px-4"
     >
-      <router-link to="/" class="font-bold text-2xl">
+      <router-link to="/" class="text-2xl font-bold">
         <span class="sr-only">Front Smile</span>
         <span
-          class="w-10 sm:w-32 h-20 icon icon--logo-small sm:icon--logo dark:icon--logo-dark-small sm:dark:icon--logo-dark"
+          class="icon icon--logo-small sm:icon--logo dark:icon--logo-dark-small sm:dark:icon--logo-dark h-20 w-10 sm:w-32"
         ></span>
       </router-link>
-      <div class="flex w-full sm:w-fit gap-1">
-        <nav class="flex w-full sm:w-fit">
+      <div class="flex w-full gap-1 sm:w-fit">
+        <nav class="relative flex w-full sm:w-fit">
           <ul
-            class="flex w-full sm:w-fit justify-around gap-4 border border-transparent border-t-0 border-b-0 border-l-0 pr-4"
+            class="flex w-full justify-around gap-4 border border-t-0 border-b-0 border-l-0 border-transparent pr-4 sm:w-fit"
           >
             <li
-              class="relative ease-in duration-300 hover:text-main group"
+              class="group relative duration-300 ease-in hover:text-main"
               v-for="linkItem in linkData"
               :key="linkItem.id"
             >
               <a
                 :href="linkItem.link"
-                class="flex flex-col gap-1 text-xs items-center sm:text-base focus:border-b-2 focus:outline-none focus:border-main focus:text-main"
+                class="flex flex-col items-center gap-1 text-xs focus:border-b-2 focus:border-main focus:text-main focus:outline-none sm:text-base"
               >
                 <span
-                  class="w-5 h-5 icon opacity-70 sm:opacity-100 dark:invert sm:hidden"
+                  class="icon h-5 w-5 opacity-70 dark:invert sm:hidden sm:opacity-100"
                   :class="`icon--${linkItem.icon}`"
                 ></span>
                 <span class="opacity-60 sm:opacity-100">{{
                   linkItem.title
                 }}</span>
                 <span
-                  class="absolute inset-center -bottom-0.5 w-0 h-0.5 bg-main group-hover:w-full ease-in duration-300"
+                  class="inset-center absolute -bottom-0.5 h-0.5 w-0 bg-main duration-300 ease-in group-hover:w-full"
                 ></span
               ></a>
             </li>
           </ul>
         </nav>
-        <button class="px-4 sm:m-0 sm:hidden" @click="isMenuOpen = !isMenuOpen">
-          <span class="w-5 h-5 icon icon--menu-burger opacity-70 dark:invert"></span>
+        <button
+          class="relative px-4 sm:m-0 sm:hidden"
+          @click="isMenuOpen = !isMenuOpen"
+        >
+          <span
+            class="icon icon--menu-burger h-5 w-5 opacity-70 dark:invert"
+          ></span>
         </button>
         <div
-          class="flex items-center p-2 sm:p-0 -z-10 bg-white dark:bg-second sm:dark:bg-dark sm:bg-none sm:dark:bg-none rounded-lg flex-col sm:flex-row absolute right-0 mb-1 sm:mb-0 sm:relative sm:bottom-none sm:gap-1"
-        :class="[isMenuOpen?'f-animate-slide-to-top':'hidden sm:flex']"
+          class="sm:bottom-none absolute -right-full bottom-full -z-10 mb-1 flex flex-col items-center rounded-lg bg-white p-2 dark:bg-second sm:static sm:right-0 sm:z-0 sm:mb-0 sm:flex sm:flex-row sm:gap-1 sm:bg-none sm:p-0 sm:dark:bg-dark sm:dark:bg-none"
+          :class="{
+            'f-animate-slide-to-right': isMenuOpen,
+            'f-animate-slide-hide-right animate-reverse ': isMenuOpen === false,
+          }"
         >
           <button
             @click="toggleDarkTheme"
-            class="relative group p-4 sm:p-0 sm:px-1"
+            class="group relative p-4 sm:p-0 sm:px-1"
             title="Przełącz tryb"
           >
             <span
-              class="w-5 h-5 icon opacity-80 group-hover:opacity-100"
+              class="icon h-5 w-5 opacity-80 group-hover:opacity-100"
               :class="[theme === 'light' ? 'icon--moon' : 'icon--sun invert']"
             >
               <span class="sr-only"
@@ -65,16 +74,16 @@
               >
             </span>
             <span
-              class="absolute inset-center -bottom-0.5 w-0 h-0.5 bg-main group-hover:w-full ease-in duration-300"
+              class="inset-center absolute -bottom-0.5 h-0.5 w-0 bg-main duration-300 ease-in group-hover:w-full"
             ></span>
           </button>
           <ul
-            class="flex flex-col sm:flex-row gap-2 sm:border sm:border-transparent sm:border-t-0 sm:border-b-0 sm:border-r-0 sm:pl-2"
+            class="flex flex-col gap-2 sm:flex-row sm:border sm:border-t-0 sm:border-b-0 sm:border-r-0 sm:border-transparent sm:pl-2"
           >
             <li
               v-for="iconLink in iconLinkData"
               :key="iconLink.id"
-              class="relative group shrink-0 sm:px-1"
+              class="group relative shrink-0 sm:px-1"
             >
               <a
                 :href="iconLink.link"
@@ -82,7 +91,7 @@
                 class="flex p-4 sm:p-0"
               >
                 <span
-                  class="block w-6 h-6 icon opacity-80"
+                  class="icon block h-6 w-6 opacity-80"
                   :class="[
                     theme === 'light' ? '' : 'invert',
                     `icon--${iconLink.icon}`,
@@ -90,7 +99,7 @@
                 ></span>
                 <span class="sr-only">{{ iconLink.title }}</span>
                 <span
-                  class="absolute inset-center -bottom-0.5 w-0 h-0.5 bg-main group-hover:w-full ease-in duration-300"
+                  class="inset-center absolute -bottom-0.5 h-0.5 w-0 bg-main duration-300 ease-in group-hover:w-full"
                 ></span>
               </a>
             </li>
@@ -132,6 +141,12 @@ const iconLinkData = ref([
   },
   {
     id: 4,
+    title: 'YouTube',
+    link: 'https://github.com/RobertHaba',
+    icon: 'youtube-black',
+  },
+  {
+    id: 4,
     title: 'Linkedin',
     link: '#about',
     icon: 'linkedin',
@@ -143,9 +158,9 @@ const iconLinkData = ref([
     icon: 'linkedin',
   },
 ]);
-const isScrollMove = ref(false);
+const isScrollMove = ref(null);
 const theme = ref('light');
-const isMenuOpen = ref(false)
+const isMenuOpen = ref(undefined);
 const handlerOnScroll = (e) => {
   isScrollMove.value = window.scrollY > 0;
 };

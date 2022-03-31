@@ -109,8 +109,12 @@
     box-shadow: 0px 0px 8px 1px rgba(47, 50, 73, 0.5);
 }
 
-.f-animate-slide-to-top {
-    animation: slideToTop 1s forwards;
+.f-animate-slide-to-right {
+    animation: slideToRight 0.5s forwards;
+}
+
+.f-animate-slide-hide-right {
+    animation: slideHideToRight 0.5s forwards;
 }
 
 @keyframes moving {
@@ -123,12 +127,21 @@
     }
 }
 
-@keyframes slideToTop {
+@keyframes slideToRight {
     0% {
-        bottom: -100vh;
+        right: -100%;
     }
     100% {
-        bottom: 100%;
+        right: 0%;
+    }
+}
+
+@keyframes slideHideToRight {
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: -100%;
     }
 }
 

@@ -1,41 +1,36 @@
 <template>
-  <section class="xl:p-4 mt-8 flex justify-center" id="projects">
+  <section class="mt-8 flex justify-center xl:p-4" id="projects">
     <div
-      class="container p-4 xl:p-12 py-12 flex flex-col gap-4 bg-white-second dark:bg-dark rounded-2xl shadow-sm dark:shadow-xl"
+      class="container flex flex-col gap-4 rounded-2xl bg-white-second p-4 py-12 shadow-sm dark:bg-dark dark:shadow-xl xl:p-12"
     >
       <HomeTitle
         titleTextSmile="Projekty"
-        class="sm:max-w-4xl sm:mx-auto md:max-w-none"
+        class="sm:mx-auto sm:max-w-4xl md:max-w-none"
       />
       <div
-        class="w-full flex flex-col xl:flex-row justify-between gap-8 xl:gap-16"
+        class="flex w-full flex-col justify-between gap-8 xl:flex-row xl:gap-16"
       >
         <div
-          class="w-full xl:max-w-sm xl:pr-4 sm:max-w-4xl sm:mx-auto md:mx-0 md:max-w-none"
+          class="w-full sm:mx-auto sm:max-w-4xl md:mx-0 md:max-w-none xl:max-w-sm xl:pr-4"
         >
           <div
-            class="flex flex-col gap-8 p-4 py-8 bg-main dark:bg-dark-light rounded-2xl"
+            class="flex flex-col gap-8 rounded-2xl bg-main p-4 py-8 dark:bg-dark-light"
           >
             <h3 class="text-xl font-semibold">Szybki podgląd</h3>
             <ul
-              class="snap-x xl:snap-none flex xl:flex-col gap-4 h-20 xl:h-[290px] overflow-x-scroll overflow-y-hidden xl:overflow-x-hidden xl:overflow-y-scroll"
+              class="flex h-20 snap-x gap-4 overflow-y-hidden overflow-x-scroll xl:h-[290px] xl:snap-none xl:flex-col xl:overflow-x-hidden xl:overflow-y-scroll"
             >
               <li
                 v-for="project in projects"
-                class="snap-center group shrink-0"
+                class="group shrink-0 snap-center"
                 :key="project.id"
               >
                 <button
-                  class="flex gap-4 items-center"
-                  @click="
-                    (activeProject = project.id),
-                      scrollToPreview(),
-                      scrollToProject()
-                  "
-                  :data-preview-project-id="project.id"
+                  class="flex items-center gap-4"
+                  @click="(activeProject = project.id), scrollToProject()"
                 >
                   <div
-                    class="flex shrink-0 items-center justify-center w-14 h-14 bg-white-second dark:bg-dark rounded-2xl"
+                    class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white-second dark:bg-dark"
                   >
                     <img
                       class="bg-center transition-all group-hover:p-2"
@@ -46,10 +41,10 @@
                   </div>
                   <div class="">
                     <p
-                      class="text-lg font-semibold text-left transition-all group-hover:opacity-100"
+                      class="text-left text-lg font-semibold transition-all group-hover:opacity-100"
                       :class="[
                         activeProject == project.id
-                          ? 'dark:text-main font-bold'
+                          ? 'font-bold dark:text-main'
                           : 'opacity-80',
                       ]"
                     >
@@ -72,44 +67,44 @@
           </div>
         </div>
         <div
-          class="w-full max-w-4xl flex flex-col gap-8 h-[400px] sm:mx-auto md:mx-0 md:max-w-none overflow-y-scroll pr-2 xl:px-4"
+          class="relative flex h-[400px] w-full max-w-4xl flex-col gap-8 overflow-y-scroll pr-2 sm:mx-auto md:mx-0 md:max-w-none xl:px-4"
           id="projectsContainer"
         >
           <div
-            class="relative flex flex-col sm:flex-row gap-4 p-4 w-full shrink-0 min-h-[240px] bg-white dark:bg-dark-light rounded-2xl overflow-hidden"
+            class="relative flex min-h-[240px] w-full shrink-0 flex-col gap-4 overflow-hidden rounded-2xl bg-white p-4 dark:bg-dark-light sm:flex-row"
             v-for="project in projects"
             :key="project.id"
             :data-project-id="project.id"
           >
             <div
-              class="h-full w-full flex items-center justify-center shrink-0 basis-52 bg-main rounded-2xl"
+              class="flex h-full w-full shrink-0 basis-52 items-center justify-center rounded-2xl bg-main"
             >
-              <img class="p-2 rounded-2xl" :src="project.image" alt="" />
+              <img class="rounded-2xl p-2" :src="project.image" alt="" />
             </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl font-bold">{{ project.title }}</h3>
-              <p class="text-gradient text-sm font-bold w-fit">
+              <p class="text-gradient w-fit text-sm font-bold">
                 {{ project.technologies }}
               </p>
-              <p class="opacity-80 text-sm">
+              <p class="text-sm opacity-80">
                 {{ project.description }}
               </p>
-              <div class="h-full flex items-end gap-4 my-4 xl:m-0">
+              <div class="my-4 flex h-full items-end gap-4 xl:m-0">
                 <a
                   :href="project.linkLive"
-                  class="p-8 py-1 border-2 border-second rounded-2xl text-sm font-bold"
+                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold"
                   ><span class="opacity-80">Otwórz</span></a
                 >
                 <a
                   :href="project.linkCode"
-                  class="p-8 py-1 border-2 border-second rounded-2xl text-sm font-bold"
+                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold"
                   ><span class="opacity-80">Kod</span></a
                 >
               </div>
             </div>
             <div
               v-if="project.isNew"
-              class="absolute flex justify-center w-32 -right-10 top-0 px-4 py-1 gradient rotate-45 translate-y-2/4"
+              class="gradient absolute -right-10 top-0 flex w-32 translate-y-2/4 rotate-45 justify-center px-4 py-1"
             >
               <p class="text-xs">New</p>
             </div>
@@ -124,6 +119,7 @@
 import HomeTitle from './HomeTitle.vue';
 import projectsData from '../../data/projects.json';
 import { ref } from '@vue/reactivity';
+import { onMounted } from '@vue/runtime-core';
 export default {
   components: {
     HomeTitle,
@@ -135,23 +131,18 @@ export default {
   },
   setup() {
     const activeProject = ref(null);
-    const scrollToPreview = () => {
-      console.log(activeProject.value);
-      const elementToScroll = document.querySelector(
-        `[data-preview-project-id="${activeProject.value}"]`
-      );
-      console.log(elementToScroll);
-      elementToScroll.scrollIntoView();
-    };
+    let projectsContainer = null;
     const scrollToProject = () => {
-      console.log('asd');
-
       const projectElement = document.querySelector(
         `[data-project-id="${activeProject.value}"]`
       );
-      projectElement.scrollIntoView({ behavior: 'smooth' });
+      console.log(projectElement.offsetTop);
+      projectsContainer.scrollTop = projectElement.offsetTop;
     };
-    return { activeProject, scrollToProject, scrollToPreview };
+    onMounted(() => {
+      projectsContainer = document.querySelector('#projectsContainer');
+    });
+    return { activeProject, scrollToProject };
   },
 };
 </script>
