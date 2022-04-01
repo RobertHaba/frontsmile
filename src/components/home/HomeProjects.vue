@@ -23,7 +23,7 @@
               <li
                 v-for="project in projects"
                 class="group shrink-0 snap-center"
-                :key="project.id"
+                :key="project.attributes.id"
               >
                 <button
                   class="flex items-center gap-4"
@@ -34,8 +34,8 @@
                   >
                     <img
                       class="bg-center transition-all group-hover:p-2"
-                      :class="[activeProject == project.id ? 'p-2' : 'p-3']"
-                      src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg"
+                      :class="[activeProject == project.attributes.id ? 'p-2' : 'p-3']"
+                      :src="backendURL + project.attributes.img.data.attributes.formats.thumbnail.url"
                       alt=""
                     />
                   </div>
@@ -43,22 +43,22 @@
                     <p
                       class="text-left text-lg font-semibold transition-all group-hover:opacity-100"
                       :class="[
-                        activeProject == project.id
+                        activeProject == project.attributes.id
                           ? 'font-bold dark:text-main'
                           : 'opacity-80',
                       ]"
                     >
-                      {{ project.title }}
+                      {{ project.attributes.title }}
                     </p>
                     <p
                       class="text-sm"
                       :class="[
-                        activeProject == project.id
+                        activeProject == project.attributes.id
                           ? 'font-semibold'
                           : 'opacity-60',
                       ]"
                     >
-                      {{ project.subtitle }}
+                      {{ project.attributes.subtitle }}
                     </p>
                   </div>
                 </button>
@@ -79,31 +79,31 @@
             <div
               class="flex h-full w-full shrink-0 basis-52 items-center justify-center rounded-2xl bg-main"
             >
-              <img class="rounded-2xl p-2" :src="project.image" alt="" />
+              <img class="w-full rounded-2xl p-2" :src="backendURL + project.attributes.img.data.attributes.formats.small.url" alt="" />
             </div>
             <div class="flex flex-col gap-2">
-              <h3 class="text-2xl font-bold">{{ project.title }}</h3>
+              <h3 class="text-2xl font-bold">{{ project.attributes.title }}</h3>
               <p class="text-gradient w-fit text-sm font-bold">
-                {{ project.technologies }}
+                {{ project.attributes.technologies }}
               </p>
               <p class="text-sm opacity-80">
-                {{ project.description }}
+                {{ project.attributes.description }}
               </p>
               <div class="my-4 flex h-full items-end gap-4 xl:m-0">
                 <a
-                  :href="project.linkLive"
+                  :href="project.attributes.linkLive"
                   class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold"
                   ><span class="opacity-80">Otwórz</span></a
                 >
                 <a
-                  :href="project.linkCode"
+                  :href="project.attributes.linkCode"
                   class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold"
                   ><span class="opacity-80">Kod</span></a
                 >
               </div>
             </div>
             <div
-              v-if="project.isNew"
+              v-if="project.attributes.isNew"
               class="gradient absolute -right-10 top-0 flex w-32 translate-y-2/4 rotate-45 justify-center px-4 py-1"
             >
               <p class="text-xs">New</p>
@@ -117,32 +117,55 @@
 
 <script>
 import HomeTitle from './HomeTitle.vue';
-import projectsData from '../../data/projects.json';
 import { ref } from '@vue/reactivity';
-import { onMounted } from '@vue/runtime-core';
+import { inject, onMounted, watch } from '@vue/runtime-core';
+import { useQuery, useResult } from '@vue/apollo-composable';
+import gql from 'graphql-tag';
+
 export default {
   components: {
     HomeTitle,
   },
-  data() {
-    return {
-      projects: projectsData.projects,
-    };
-  },
   setup() {
+    const backendURL = inject('backendURL')
     const activeProject = ref(null);
     let projectsContainer = null;
     const scrollToProject = () => {
       const projectElement = document.querySelector(
         `[data-project-id="${activeProject.value}"]`
       );
-      console.log(projectElement.offsetTop);
       projectsContainer.scrollTop = projectElement.offsetTop;
     };
     onMounted(() => {
       projectsContainer = document.querySelector('#projectsContainer');
     });
-    return { activeProject, scrollToProject };
+    const {result} = useQuery(gql`
+      query {
+        portfolios {
+          data {
+            id
+            attributes {
+              title
+              subtitle
+              technologies
+              description
+              linkLive
+              linkCode
+              img{
+                data{
+                  attributes{
+                    url
+                    formats
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `);
+    const projects = useResult(result,null,data=> data.portfolios.data)
+    return { activeProject, scrollToProject, projects, backendURL };
   },
 };
 </script>
