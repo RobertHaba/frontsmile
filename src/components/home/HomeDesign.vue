@@ -1,26 +1,39 @@
 <template>
   <section class="mt-8 flex justify-center" id="projects">
     <div
-      class="container md:p-4 xl:p-12 py-12 flex flex-col gap-4 bg-white-second dark:bg-dark rounded-2xl shadow-sm dark:shadow-xl"
+      class="container flex flex-col gap-4 rounded-2xl bg-white-second py-12 shadow-sm dark:bg-dark dark:shadow-xl md:p-4 xl:p-12"
     >
       <HomeTitle
-        titleTextSmile="Designe"
-        class="sm:max-w-4xl pl-4 xl:pl-0 sm:mx-auto md:max-w-none"
+        titleTextSmile="Design"
+        class="pl-4 sm:mx-auto sm:max-w-4xl md:max-w-none xl:pl-0"
       />
-      <div class="w-full p-2 xl:p-4 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+      <div
+        class="grid w-full grid-cols-2 gap-2 p-2 md:grid-cols-3 md:gap-4 xl:p-4"
+      >
         <div
-          class="flex flex-col gap-4 max-w-sm"
+          class="flex max-w-sm flex-col gap-4"
           v-for="designeArray in designMultipleArray"
           :key="designeArray.id"
         >
-          <HomeDesignCard
-            :design="desginEl"
-            v-for="desginEl in designeArray"
-            :key="desginEl.id"
-          />
+          <template v-for="desginEl in designeArray">
+            <HomeDesignCard
+              :design="desginEl"
+              v-if="desginEl"
+              :key="desginEl.id"
+              :id="'designCard-' + desginEl.id"
+              @click="openModalHandler(desginEl)"
+            />
+          </template>
         </div>
       </div>
     </div>
+    <ModalImage
+      v-if="isModalOpen"
+      :modalData="activeItemModalData"
+      @click="closeModalHandler"
+      @keyup.esc="closeModalHandler"
+      tabindex="-1"
+    />
   </section>
 </template>
 
@@ -28,20 +41,25 @@
 import HomeTitle from './HomeTitle.vue';
 
 import HomeDesignCard from './HomeDesignCard.vue';
-import designeData from '../../data/designe.json';
 import { ref } from '@vue/reactivity';
-import { onMounted } from '@vue/runtime-core';
+import { onMounted, watch, watchEffect, defineEmits } from '@vue/runtime-core';
+import { useQuery, useResult } from '@vue/apollo-composable';
+
+import gql from 'graphql-tag';
+import ModalImage from './ModalImage.vue';
 export default {
   components: {
     HomeTitle,
     HomeDesignCard,
+    ModalImage,
   },
   setup() {
     const designMultipleArray = ref([]);
     const columnLength = ref(null);
     const createDesignArray = (start) => {
       let newArray = [];
-      designeData.desgin.forEach((element, index) => {
+      console.log(designData);
+      designData.value.forEach((element, index) => {
         index = index + start;
         if (index % columnLength.value === 0) {
           newArray.push(element);
@@ -70,11 +88,61 @@ export default {
         handlerCreateTripleDesignArray();
       }
     };
+    const { result } = useQuery(gql`
+      query {
+        designs(pagination: { start: 0, limit: 20 }) {
+          data {
+            id
+            attributes {
+              title
+              color {
+                value
+              }
+              img {
+                data {
+                  attributes {
+                    url
+                    formats
+                    alternativeText
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `);
+    const designData = useResult(result, null, (data) => data.designs.data);
     window.addEventListener('resize', checkForScreenSize);
-    onMounted(() => {
-      checkForScreenSize()
+    onMounted(() => {});
+    watchEffect(() => {
+      console.log(designData);
+      if (designData.value) {
+        console.log('Work');
+        checkForScreenSize();
+      }
     });
-    return { designMultipleArray };
+    const activeItemModalData = ref(null);
+    const isModalOpen = ref(false);
+    const openModalHandler = (data) => {
+      console.log(data);
+      activeItemModalData.value = data;
+      isModalOpen.value = true;
+    };
+    const closeModalHandler = () => {
+      isModalOpen.value = false;
+      changeFocusToElement();
+    };
+    const changeFocusToElement = () => {
+      document.querySelector('#designCard-' + activeItemModalData.value.id).focus()
+    };
+    return {
+      designMultipleArray,
+      openModalHandler,
+      isModalOpen,
+      closeModalHandler,
+      activeItemModalData,
+    };
   },
 };
 </script>

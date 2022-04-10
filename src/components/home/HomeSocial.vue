@@ -16,6 +16,7 @@
             v-for="social in socials"
             :key="social.id"
             :href="social.URL"
+            :aria-label="'Naciśnij enter, aby przejść do strony ' + social.subtitle"
           >
             <div class="">
               <span class="w-8 h-8 icon" :class="social.icon"></span>

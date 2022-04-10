@@ -2,17 +2,20 @@
     "socials": [{
             "id": 0,
             "title": "Haba",
+            "subtitle": "OhMyDev",
             "URL": "https://ohmydev.pl/users/haba",
             "icon": "icon--ohmydev"
         },
         {
             "id": 0,
             "title": "RobertHaba",
+            "subtitle": "GitHub",
             "URL": "https://github.com/RobertHaba",
             "icon": "icon--github"
         }, {
             "id": 0,
             "title": "HabaDev",
+            "subtitle": "YouTube",
             "URL": "https://www.youtube.com/channel/UCvDsnuD2lGmCdHWJyNv_G-g/featured",
             "icon": "icon--youtube"
         }

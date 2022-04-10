@@ -23,7 +23,7 @@
               <li
                 v-for="project in projects"
                 class="group shrink-0 snap-center"
-                :key="project.attributes.id"
+                :key="project.id"
               >
                 <button
                   class="flex items-center gap-4"
@@ -34,7 +34,7 @@
                   >
                     <img
                       class="bg-center transition-all group-hover:p-2"
-                      :class="[activeProject == project.attributes.id ? 'p-2' : 'p-3']"
+                      :class="[activeProject == project.id ? 'p-2' : 'p-3']"
                       :src="backendURL + project.attributes.img.data.attributes.formats.thumbnail.url"
                       alt=""
                     />
@@ -43,7 +43,7 @@
                     <p
                       class="text-left text-lg font-semibold transition-all group-hover:opacity-100"
                       :class="[
-                        activeProject == project.attributes.id
+                        activeProject == project.id
                           ? 'font-bold dark:text-main'
                           : 'opacity-80',
                       ]"
@@ -51,9 +51,9 @@
                       {{ project.attributes.title }}
                     </p>
                     <p
-                      class="text-sm"
+                      class="text-sm text-left"
                       :class="[
-                        activeProject == project.attributes.id
+                        activeProject == project.id
                           ? 'font-semibold'
                           : 'opacity-60',
                       ]"
@@ -79,7 +79,7 @@
             <div
               class="flex h-full w-full shrink-0 basis-52 items-center justify-center rounded-2xl bg-main"
             >
-              <img class="w-full rounded-2xl p-2" :src="backendURL + project.attributes.img.data.attributes.formats.small.url" alt="" />
+              <img class="w-full rounded-2xl p-2" :src="backendURL + project.attributes.img.data.attributes.formats.small.url" :alt="project.attributes.img.data.attributes.alternativeText" />
             </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl font-bold">{{ project.attributes.title }}</h3>
@@ -92,12 +92,14 @@
               <div class="my-4 flex h-full items-end gap-4 xl:m-0">
                 <a
                   :href="project.attributes.linkLive"
-                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold"
+                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-second hover:text-white"
+                  aria-label="Naciśnij enter, aby otworzyć stronę"
                   ><span class="opacity-80">Otwórz</span></a
                 >
-                <a
+                <a v-if="project.attributes.linkCode"
                   :href="project.attributes.linkCode"
-                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold"
+                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-second hover:text-white"
+                  aria-label="Naciśnij enter, aby przejść do strony z kodem"
                   ><span class="opacity-80">Kod</span></a
                 >
               </div>
@@ -156,6 +158,7 @@ export default {
                   attributes{
                     url
                     formats
+                    alternativeText
                   }
                 }
               }

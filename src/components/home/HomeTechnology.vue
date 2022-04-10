@@ -1,43 +1,36 @@
 <template>
-  <section class="w-full flex justify-center mt-4 text-white">
-    <div class="container xl:p-4 grid grid-rows-2 xl:grid-rows-none  xl:grid-cols-2 gap-8">
+  <section class="mt-4 flex w-full justify-center text-white">
+    <div
+      class="container grid grid-rows-2 gap-8 xl:grid-cols-2 xl:grid-rows-none xl:p-4"
+    >
       <div
-        class="bg-second w-full max-w-lg justify-self-center flex justify-center rounded-2xl p-8 shadow-sm dark:shadow-xl"
+        class="flex w-full max-w-lg justify-self-center rounded-2xl bg-second p-8 shadow-sm dark:shadow-xl"
+        v-for="technology in technologies"
+        :key="technology.id"
       >
         <div class="max-w-md">
-          <h2 class="text-2xl font-bold mb-2">Technologie - programowanie</h2>
-          <div class="mb-3">
-            <p class="mb-1">Swobodne</p>
+          <h2 class="mb-2 text-2xl font-bold">
+            {{ technology.attributes.title }}
+          </h2>
+          <div
+            class="mb-3"
+            v-for="technologyContent in technology.attributes.technology"
+            :key="technologyContent.id"
+          >
+            <p class="mb-1">{{ technologyContent.title }}</p>
             <div class="flex gap-4">
-              <span class="w-8 h-8 icon icon--html"></span>
-              <span class="w-8 h-8 icon icon--html"></span>
-              <span class="w-8 h-8 icon icon--html"></span>
-              <span class="w-8 h-8 icon icon--html"></span>
-            </div>
-          </div>
-          <div class="mb-3">
-            <p class="mb-1">Swobodne</p>
-            <div class="flex gap-4">
-              <span class="w-8 h-8 icon icon--html"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="bg-second w-full max-w-lg justify-self-center flex justify-center rounded-2xl p-8 shadow-sm dark:shadow-xl"
-      >
-        <div class="max-w-md">
-          <h2 class="text-2xl font-bold mb-2">Technologie - programowanie</h2>
-          <div class="mb-3">
-            <p class="mb-1">Swobodne</p>
-            <div class="flex gap-4">
-              <span class="w-8 h-8 icon icon--html"></span>
-            </div>
-          </div>
-          <div class="mb-3">
-            <p class="mb-1">Swobodne</p>
-            <div class="flex gap-4">
-              <span class="w-8 h-8 icon icon--html"></span>
+              <div
+                v-for="technologyIcon in technologyContent.icon"
+                :key="technologyIcon.id"
+                class="flex flex-col items-center gap-0.5"
+              >
+                <span
+                  class="icon h-8 w-8"
+                  :style="`background-image:url('${backendURL}${technologyIcon.icon.data[0].attributes.url}')`"
+                  :title="technologyIcon.title"
+                ></span>
+                <p class="text-[0.7rem]">{{ technologyIcon.title }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -46,6 +39,35 @@
   </section>
 </template>
 
-<script setup></script>
-
-<style lang="scss" scoped></style>
+<script setup>
+import { useQuery, useResult } from '@vue/apollo-composable';
+import { inject } from '@vue/runtime-core';
+import gql from 'graphql-tag';
+const backendURL = inject('backendURL');
+const { result } = useQuery(gql`
+  query {
+    technologies {
+      data {
+        attributes {
+          title
+          technology {
+            title
+            icon {
+              title
+              icon {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+const technologies = useResult(result, null, (data) => data.technologies.data);
+console.log(technologies);
+</script>
