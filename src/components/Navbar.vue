@@ -66,11 +66,11 @@
           >
             <span
               class="icon h-5 w-5 opacity-80 group-hover:opacity-100"
-              :class="[theme === 'light' ? 'icon--moon' : 'icon--sun invert']"
+              :class="[store.theme === 'light' ? 'icon--moon' : 'icon--sun invert']"
             >
               <span class="sr-only"
                 >Przełącz tryb na span
-                {{ theme === 'light' ? 'ciemny' : 'jasny' }}</span
+                {{ store.theme === 'light' ? 'ciemny' : 'jasny' }}</span
               >
             </span>
             <span
@@ -93,7 +93,7 @@
                 <span
                   class="icon block h-6 w-6 opacity-80"
                   :class="[
-                    theme === 'light' ? '' : 'invert',
+                    store.theme === 'light' ? '' : 'invert',
                     `icon--${iconLink.icon}`,
                   ]"
                 ></span>
@@ -112,6 +112,7 @@
 
 <script setup>
 import { ref } from '@vue/reactivity';
+import { store } from '../store/store';
 const linkData = ref([
   {
     id: 0,
@@ -128,7 +129,7 @@ const linkData = ref([
   {
     id: 2,
     title: 'Kontakt',
-    link: '#about',
+    link: '#contact',
     icon: 'mail',
   },
 ]);
@@ -153,13 +154,12 @@ const iconLinkData = ref([
   },
   {
     id: 4,
-    title: 'BLOG',
-    link: '#about',
-    icon: 'linkedin',
+    title: 'Facebook',
+    link: 'https://www.facebook.com/frontsmile',
+    icon: 'facebook-black',
   },
 ]);
 const isScrollMove = ref(null);
-const theme = ref('light');
 const isMenuOpen = ref(undefined);
 const handlerOnScroll = (e) => {
   isScrollMove.value = window.scrollY > 0;
@@ -168,7 +168,7 @@ const toggleDarkTheme = () => {
   const themeMode = localStorage.theme === 'dark' ? 'light' : 'dark';
   document.documentElement.classList.remove('dark');
   document.documentElement.classList.add(themeMode);
-  theme.value = themeMode;
+  store.theme = themeMode;
   setThemeInLocalStorage(themeMode);
 };
 const setThemeInLocalStorage = (themeMode) => {
@@ -177,7 +177,7 @@ const setThemeInLocalStorage = (themeMode) => {
 const loadThemeFromLocalStorage = () => {
   if (localStorage.getItem('theme')) {
     document.documentElement.classList.add(localStorage.getItem('theme'));
-    theme.value = localStorage.getItem('theme');
+    store.theme = localStorage.getItem('theme');
   }
 };
 loadThemeFromLocalStorage();

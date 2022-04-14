@@ -1,16 +1,16 @@
 <template>
   <header
-    class="relative mt-4 sm:mt-20 w-full xl:h-[60vh] h-[calc(90vh-6rem)] flex justify-center xl:p-8"
+    class="relative mt-4 flex h-[calc(90vh-6rem)] w-full justify-center sm:mt-20 xl:h-[60vh] xl:p-8"
   >
     <div
-      class="container h-full grid grid-rows-2 xl:grid-rows-none xl:grid-cols-2 items-center justify-center xl:justify-evenly xl:gap-8 p-8 bg-main rounded-2xl shadow-xl"
+      class="container grid h-full grid-rows-2 items-center justify-center rounded-2xl bg-main p-8 shadow-xl xl:grid-cols-2 xl:grid-rows-none xl:justify-evenly xl:gap-8"
     >
-      <div class="relative w-full flex justify-center">
+      <div class="relative flex w-full justify-center">
         <span
-          class="absolute inset-x-0 bottom-0 mx-auto block w-full max-w-md gradient h-36 rounded-full z-0"
+          class="gradient absolute inset-x-0 bottom-0 z-0 mx-auto block h-36 w-full max-w-md rounded-full"
         ></span>
         <svg
-          class="flex w-2/4 h-full z-10"
+          class="z-10 flex h-full w-2/4"
           width="690"
           height="574"
           viewBox="0 0 690 574"
@@ -206,61 +206,15 @@
         </svg>
       </div>
       <div
-        class="max-w-md flex flex-col gap-4 self-center justify-self-center text-white"
+        class="flex max-w-md flex-col gap-4 self-center justify-self-center text-white"
       >
-        <p class="font-bold xl:text-7xl text-5xl">Hej, tu Haba</p>
-        <h1 class="relative font-bold xl:text-4xl text-2xl">
+        <p class="text-5xl font-bold xl:text-7xl">Hej, tu Haba</p>
+        <h1 class="relative text-2xl font-bold xl:text-4xl">
           a to jest Frontend ze
-          <span class="block dark:text-gradient smile-line-white" >Smilem</span>
+          <span class="dark:text-gradient smile-line-white block">Smilem</span>
         </h1>
       </div>
     </div>
   </header>
-  <section
-    class="relative w-full mt-8 h-auto xl:h-[35vh] rounded-2xl flex items-center justify-center"
-  >
-    <div
-      class="container flex flex-wrap xl:flex-nowrap gap-8 mx-auto justify-center xl:justify-between items-stretch xl:px-8"
-    >
-      <HomeArticle
-        v-for="article in articles"
-        :key="article.id"
-        :articleData="article"
-      />
-      <div
-        class="flex flex-col gap-8 justify-between w-full max-w-md xl:max-w-sm rounded-2xl p-6 bg-white-second dark:bg-dark shadow-sm dark:shadow-xl"
-      >
-        <p>
-          <span class="block text-5xl text-gradient font-bold mb-4">56</span>
-          Zostawionych <strong>uśmiechów</strong>, wszyscy czekamy na
-          <strong>Twój!</strong>
-        </p>
-        <button
-          class="relative w-full flex justify-center items-center gap-1 rounded-xl bg-second text-white button-shadow px-4 py-2 confetti-button z-10 hover:animate-pulse"
-          :class="{ animate: animateButton }"
-          @click="animateButton = true"
-        >
-          <span class="icon w-8 h-8 icon--happy mr-4"></span>
-          Zostaw <span class="smile-line">uśmiech</span>
-        </button>
-      </div>
-    </div>
-  </section>
 </template>
 
-<script>
-import { ref } from '@vue/reactivity';
-import HomeArticle from './HomeArticle.vue';
-import articlesData from '../../data/article.json';
-export default {
-  components: {
-    HomeArticle,
-    articlesData,
-  },
-  setup() {
-    const animateButton = ref(false);
-    const articles = articlesData.articles;
-    return { animateButton, articles };
-  },
-};
-</script>

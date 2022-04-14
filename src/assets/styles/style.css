@@ -8,7 +8,7 @@
 .smile-line-white::before {
     content: '';
     position: absolute;
-    top: 100%;
+    top: 85%;
     left: 0;
     width: 100%;
     height: 6rem;
@@ -83,6 +83,14 @@
 
 .icon--youtube {
     background-image: url('../icons/logo-youtube.svg');
+}
+
+.icon--facebook {
+    background-image: url('../icons/logo-facebook.svg');
+}
+
+.icon--facebook-black {
+    background-image: url('../icons/facebook-black.svg');
 }
 
 .icon--youtube-black {

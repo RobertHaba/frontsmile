@@ -1,5 +1,5 @@
 <template>
-  <button class="flex flex-col gap-3 sm:gap-4 w-full group" aria-label="Naciśnij enter, aby otworzyć podgląd zdjęcia">
+  <button class="flex flex-col gap-3 sm:gap-4 w-full group" aria-label="Naciśnij enter, aby otworzyć podgląd zdjęcia" title="Podgląd">
     
     <div
       class="relative w-full bg-main px-2 py-1 sm:px-8 sm:py-4 rounded-xl shadow-md overflow-hidden"

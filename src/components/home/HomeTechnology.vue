@@ -69,5 +69,4 @@ const { result } = useQuery(gql`
   }
 `);
 const technologies = useResult(result, null, (data) => data.technologies.data);
-console.log(technologies);
 </script>

@@ -58,14 +58,12 @@ export default {
     const columnLength = ref(null);
     const createDesignArray = (start) => {
       let newArray = [];
-      console.log(designData);
       designData.value.forEach((element, index) => {
         index = index + start;
         if (index % columnLength.value === 0) {
           newArray.push(element);
         }
       });
-      console.log(designMultipleArray.value);
       designMultipleArray.value.push(newArray);
     };
     const handlerCreateDoubleDesignArray = () => {
@@ -116,16 +114,13 @@ export default {
     window.addEventListener('resize', checkForScreenSize);
     onMounted(() => {});
     watchEffect(() => {
-      console.log(designData);
       if (designData.value) {
-        console.log('Work');
         checkForScreenSize();
       }
     });
     const activeItemModalData = ref(null);
     const isModalOpen = ref(false);
     const openModalHandler = (data) => {
-      console.log(data);
       activeItemModalData.value = data;
       isModalOpen.value = true;
     };

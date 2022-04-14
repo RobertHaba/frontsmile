@@ -29,7 +29,7 @@
           </a>
         </div>
       </div>
-      <div class="h-60 sm:h-80">
+      <div class="h-60 sm:h-80 shrink-0">
         <img
           class="h-full rounded-full"
           src="../../assets/video/feed.gif"

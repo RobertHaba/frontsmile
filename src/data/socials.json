@@ -7,17 +7,23 @@
             "icon": "icon--ohmydev"
         },
         {
-            "id": 0,
+            "id": 1,
             "title": "RobertHaba",
             "subtitle": "GitHub",
             "URL": "https://github.com/RobertHaba",
             "icon": "icon--github"
         }, {
-            "id": 0,
+            "id": 2,
             "title": "HabaDev",
             "subtitle": "YouTube",
             "URL": "https://www.youtube.com/channel/UCvDsnuD2lGmCdHWJyNv_G-g/featured",
             "icon": "icon--youtube"
+        }, {
+            "id": 3,
+            "title": "@Frontsmile",
+            "subtitle": "Facebook",
+            "URL": "https://www.facebook.com/frontsmile",
+            "icon": "icon--facebook"
         }
     ]
 }

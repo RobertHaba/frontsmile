@@ -33,7 +33,6 @@ const props = defineProps({
 const refModalEl = ref(null)
 const backendURL = inject('backendURL');
 const hasLargeFormat = computed(() => {
-  console.log(props.modalData.attributes.img.data.attributes.formats.large);
   return props.modalData.attributes.img.data.attributes.formats.large
     ? backendURL +
         props.modalData.attributes.img.data.attributes.formats.large.url
