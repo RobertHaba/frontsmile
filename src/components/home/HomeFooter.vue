@@ -11,7 +11,7 @@
         >
           <img
             class="h-full w-full rounded-full"
-            src="../../assets/video/job.gif"
+            v-lazy="'/src/assets/video/job.gif'"
             alt=""
           />
         </div>
@@ -82,7 +82,7 @@
           </p>
           <img
             class="h-52 w-52 rounded-full"
-            src="src/assets/video/sent.gif"
+            v-lazy="'/src/assets/video/sent.gif'"
             alt="Animacja - Mężczynza wysyłający wiadomość z laptopa."
           />
         </div>
@@ -95,7 +95,7 @@
           </p>
           <img
             class="h-52 w-52 rounded-full"
-            src="src/assets/video/error.gif"
+            v-lazy="'/src/assets/video/error.gif'"
             alt="Animacja - Zdziwiony mężczyzna trzymający gniazdko elektryczne. Obok niego znajduje się zdziwiona kobieta, która trzyma odłączonoą wtyczkę."
           />
         </div>

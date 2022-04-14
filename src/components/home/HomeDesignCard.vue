@@ -5,7 +5,7 @@
       class="relative w-full bg-main px-2 py-1 sm:px-8 sm:py-4 rounded-xl shadow-md overflow-hidden"
       :style="`background-color:${design.attributes.color[0].value}CC`"
     >
-      <img class="rounded-xl shadow-lg transition group-hover:scale-125" :src="backendURL + design.attributes.img.data.attributes.formats.small.url" :alt="design.attributes.img.data.attributes.alternativeText" />
+      <img class="rounded-xl shadow-lg transition group-hover:scale-125" v-lazy="backendURL + design.attributes.img.data.attributes.formats.small.url" :alt="design.attributes.img.data.attributes.alternativeText" />
     </div>
     <div class="flex items-center justify-between w-full">
       <h3 class="opacity-80 font-semibold text-xs sm:text-base">{{ design.attributes.title }}</h3>

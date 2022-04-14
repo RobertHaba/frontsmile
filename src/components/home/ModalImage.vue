@@ -14,7 +14,7 @@
       />
       <img
         class="max-h-full"
-        :src="
+        v-lazy="
           backendURL +
           props.modalData.attributes.img.data.attributes.formats.small.url
         "

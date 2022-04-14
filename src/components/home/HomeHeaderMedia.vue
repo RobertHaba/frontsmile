@@ -30,7 +30,7 @@
         <div class="flex h-48 justify-center sm:h-48" v-if="smileWasCreated">
           <img
             class="h-full rounded-full"
-            :src="[
+            v-lazy="[
               store.theme === 'light'
                 ? 'src/assets/video/smiley-light.gif'
                 : 'src/assets/video/smiley-dark.gif',

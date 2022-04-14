@@ -6,7 +6,7 @@
         <picture>
           <img
             class="w-40 bg-dark-light h-24 rounded-2xl object-cover max-w-none border border-main"
-            :src="articleData.thumbnail"
+            v-lazy="articleData.thumbnail"
             alt=""
           />
         </picture>

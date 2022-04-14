@@ -32,8 +32,8 @@
       <div class="h-60 sm:h-80 shrink-0">
         <img
           class="h-full rounded-full"
-          src="../../assets/video/feed.gif"
-          alt=""
+          v-lazy="'/src/assets/video/feed.gif'"
+          alt="Animacja - Mężczyna leży na kanapie trzymając w ręce smartfona. W tle duży ruszający się smartfon"
         />
       </div>
     </div>
