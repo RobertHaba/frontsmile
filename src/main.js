@@ -7,14 +7,14 @@ import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { DefaultApolloClient } from '@vue/apollo-composable';
 import VueLazyLoad from 'vue3-lazyload';
 const defaultClient = new ApolloClient({
-  uri: 'http://192.168.1.50:1337/graphql',
+  uri: 'https://frontsmile.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 });
 
 const app = createApp({
   setup() {
     provide(DefaultApolloClient, defaultClient);
-    provide('backendURL', 'http://192.168.1.50:1337');
+    provide('backendURL', ''); //Change for new backend IMG
   },
   render() {
     return h(App);

@@ -71,11 +71,11 @@
             >Pobierz CV</a
           >
           <a
-            href="#"
-            class="flex items-center gap-4 w-fit px-8 py-2 border border-second text-second rounded-xl hover:animate-pulse"
+            href="#contact"
+            class="flex items-center gap-4 w-fit px-8 py-2 border border-dark dark:border-white dark:text-white rounded-xl hover:animate-pulse"
           >
             <span
-              class="w-4 h-4 icon icon--briefcase-purple  group-hover:animate-bounce"
+              class="w-4 h-4 icon icon--briefcase dark:invert  group-hover:animate-bounce"
             ></span
             >Skontaktuj się</a
           >

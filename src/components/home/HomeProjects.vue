@@ -143,7 +143,7 @@ export default {
     });
     const {result} = useQuery(gql`
       query {
-        portfolios {
+        portfolios(sort:"id:asc") {
           data {
             id
             attributes {

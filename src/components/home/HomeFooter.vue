@@ -192,7 +192,6 @@ const resetFormStatus = () => {
 };
 const sendMessage = () => {
   if (!isLockedSending.value) {
-    console.log('Sending');
     isLockedSending.value = true;
     axios
       .post(backendURL + '/api/contact-forms', {
