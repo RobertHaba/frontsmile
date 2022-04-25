@@ -93,6 +93,14 @@
     background-image: url('../icons/facebook-black.svg');
 }
 
+.icon--twitter {
+    background-image: url('../icons/logo-twitter.svg');
+}
+
+.icon--twitter-black {
+    background-image: url('../icons/logo-twitter-black.svg');
+}
+
 .icon--youtube-black {
     background-image: url('../icons/youtube-black.svg');
 }

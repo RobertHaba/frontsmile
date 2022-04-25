@@ -18,7 +18,7 @@
             :key="technologyContent.id"
           >
             <p class="mb-1">{{ technologyContent.title }}</p>
-            <div class="flex gap-4">
+            <div class="flex gap-4 flex-wrap">
               <div
                 v-for="technologyIcon in technologyContent.icon"
                 :key="technologyIcon.id"
@@ -26,7 +26,7 @@
               >
                 <span
                   class="icon h-8 w-8"
-                  :style="`background-image:url('${backendURL}${technologyIcon.icon.data[0].attributes.url}')`"
+                  :style="`background-image:url('${technologyIcon.icon.data[0].attributes.url}')`"
                   :title="technologyIcon.title"
                 ></span>
                 <p class="text-[0.7rem]">{{ technologyIcon.title }}</p>
@@ -41,9 +41,7 @@
 
 <script setup>
 import { useQuery, useResult } from '@vue/apollo-composable';
-import { inject } from '@vue/runtime-core';
 import gql from 'graphql-tag';
-const backendURL = inject('backendURL');
 const { result } = useQuery(gql`
   query {
     technologies {

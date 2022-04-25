@@ -35,7 +35,7 @@
                     <img
                       class="bg-center transition-all group-hover:p-2"
                       :class="[activeProject == project.id ? 'p-2' : 'p-3']"
-                      v-lazy="backendURL + project.attributes.img.data.attributes.formats.thumbnail.url"
+                      v-lazy="project.attributes.img.data.attributes.formats.thumbnail.url"
                       alt=""
                     />
                   </div>
@@ -79,7 +79,7 @@
             <div
               class="flex h-full w-full shrink-0 basis-52 items-center justify-center rounded-2xl bg-main"
             >
-              <img class="w-full rounded-2xl p-2" v-lazy="backendURL + project.attributes.img.data.attributes.formats.small.url" :alt="project.attributes.img.data.attributes.alternativeText" />
+              <img class="w-full rounded-2xl p-2" v-lazy="project.attributes.img.data.attributes.formats.small.url" :alt="project.attributes.img.data.attributes.alternativeText" />
             </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl font-bold">{{ project.attributes.title }}</h3>
@@ -129,7 +129,6 @@ export default {
     HomeTitle,
   },
   setup() {
-    const backendURL = inject('backendURL')
     const activeProject = ref(null);
     let projectsContainer = null;
     const scrollToProject = () => {
@@ -168,7 +167,7 @@ export default {
       }
     `);
     const projects = useResult(result,null,data=> data.portfolios.data)
-    return { activeProject, scrollToProject, projects, backendURL };
+    return { activeProject, scrollToProject, projects};
   },
 };
 </script>

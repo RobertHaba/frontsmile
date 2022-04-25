@@ -14,7 +14,7 @@ const defaultClient = new ApolloClient({
 const app = createApp({
   setup() {
     provide(DefaultApolloClient, defaultClient);
-    provide('backendURL', ''); //Change for new backend IMG
+    provide('backendURL', 'https://frontsmile.herokuapp.com');
   },
   render() {
     return h(App);

@@ -1,0 +1,30 @@
+{
+    "name": "FrontSmile - Strony internetowe tworzone z Uśmiechem 😉",
+    "short_name": "FrontSmile",
+    "start_url": "/",
+    "scope": "/",
+    "icons": [{
+            "src": "https://frontsmile.pl/images/icons-vector.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        },
+        {
+            "src": "https://frontsmile.pl/images/icons-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }, {
+            "src": "https://frontsmile.pl/images/maskable_icon.png",
+            "type": "image/png",
+            "sizes": "1024x1024",
+            "purpose": "maskable"
+        },
+        {
+            "src": "https://frontsmile.pl/google-touch-icon.png",
+            "sizes": "512x512"
+        }
+    ],
+    "background_color": "#161D2F",
+    "theme_color": "#FEC260",
+    "display": "fullscreen",
+    "description": "FrontSmile to miejsce gdzie możesz załapać ze mną kontakt odnośnie współpracy na temat stron www. Znajdziesz tutaj również moje ostatnie aktywności 📝"
+}

@@ -24,6 +24,12 @@
             "subtitle": "Facebook",
             "URL": "https://www.facebook.com/frontsmile",
             "icon": "icon--facebook"
+        }, {
+            "id": 4,
+            "title": "@FrontSmileDev",
+            "subtitle": "Twitter",
+            "URL": "https://twitter.com/FrontSmileDev",
+            "icon": "icon--twitter"
         }
     ]
 }

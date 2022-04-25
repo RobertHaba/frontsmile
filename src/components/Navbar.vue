@@ -158,6 +158,12 @@ const iconLinkData = ref([
     link: 'https://www.facebook.com/frontsmile',
     icon: 'facebook-black',
   },
+  {
+    id: 4,
+    title: 'Twitter',
+    link: 'https://twitter.com/FrontSmileDev',
+    icon: 'twitter-black',
+  },
 ]);
 const isScrollMove = ref(null);
 const isMenuOpen = ref(undefined);

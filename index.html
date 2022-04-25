@@ -3,12 +3,30 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#FEC260">
+    <link rel="icon" href="favicon.svg">
+    <link rel="mask-icon" href="mask-icon.svg" color="#FEC260">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="manifest" href="/manifest.json">
+    <title>FrontSmile | Strony internetowe tworzone z Uśmiechem 😉</title>
+    <meta name="description" content="FrontSmile to miejsce gdzie możesz załapać ze mną kontakt odnośnie współpracy na temat stron www. Znajdziesz tutaj również moje ostatnie aktywności 📝">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FrontSmile | Strony internetowe tworzone z Uśmiechem 😉" />
+    <meta property="og:description" content="FrontSmile to miejsce gdzie możesz załapać ze mną kontakt odnośnie współpracy na temat stron www. Znajdziesz tutaj również moje ostatnie aktywności 📝" />
+    <meta property="og:image" content="https://www.frontsmile.pl/src/assets/img/frontsmile-social.png" />
+    <meta property="og:url" content="https://www.frontsmile.pl/" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta name="twitter:title" content="FrontSmile | Strony internetowe tworzone z Uśmiechem 😉">
+    <meta name="twitter:description" content="FrontSmile to miejsce gdzie możesz załapać ze mną kontakt odnośnie współpracy na temat stron www. Znajdziesz tutaj również moje ostatnie aktywności 📝">
+    <meta name="twitter:image" content="https://www.frontsmile.pl/src/assets/img/frontsmile-social.png">
+    <meta name="twitter:site" content="@FrontSmileDev">
+    <meta name="twitter:creator" content="@FrontSmileDev">
+
 </head>
 
 <body class="bg-white dark:bg-dark-light p-4">
@@ -19,14 +37,17 @@
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
 
-    <script>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/service-worker.js"></script>
+
+    <script async>
         var chatbox = document.getElementById('fb-customer-chat');
         chatbox.setAttribute("page_id", "101092495895825");
         chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
-    <script>
+    <script async>
         window.fbAsyncInit = function() {
             FB.init({
                 xfbml: true,
@@ -43,12 +64,6 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script id="mcjs">
-        ! function(c, h, i, m, p) {
-            m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
-        }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/ca36ff7d40b31b65884aa23d4/4ccf459152c3027a4e4a2d1ce.js");
-    </script>
-    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
