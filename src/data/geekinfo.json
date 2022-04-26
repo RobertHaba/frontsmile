@@ -1,0 +1,68 @@
+{
+
+    "colors": {
+        "title": "Kolory",
+        "data": ["#FEC260", "#A12568", "#161D2F", "#222538", "#F5F5F5", "#FFFFFF"]
+    },
+    "info": [{
+        "title": "Fonty",
+        "data": [{
+            "text": "Nunito",
+            "link": ""
+        }]
+    }, {
+        "title": "Assets",
+        "data": [{
+            "text": "Flaticon",
+            "link": "https://www.flaticon.com"
+        }, {
+            "text": "Storyset",
+            "link": "https://www.storyset.com"
+        }]
+    }, {
+        "title": "Technologie",
+        "data": [{
+            "text": "Vue",
+            "link": ""
+        }, {
+            "text": "Tailwind",
+            "link": ""
+        }, {
+            "text": "Axios",
+            "link": ""
+        }, {
+            "text": "GraphQL",
+            "link": ""
+        }, {
+            "text": "Vite",
+            "link": ""
+        }, {
+            "text": "Vue3-lazyload",
+            "link": ""
+        }, {
+            "text": "Apollo",
+            "link": ""
+        }, {
+            "text": "PWA",
+            "link": ""
+        }, {
+            "text": "GraphQL-Tag",
+            "link": ""
+        }, {
+            "text": "Facebook Chat",
+            "link": ""
+        }, {
+            "text": "Strapi",
+            "link": ""
+        }, {
+            "text": "Heroku",
+            "link": ""
+        }, {
+            "text": "Cloudinary",
+            "link": ""
+        }, {
+            "text": "Sendgrid",
+            "link": ""
+        }]
+    }]
+}

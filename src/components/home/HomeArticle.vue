@@ -1,6 +1,6 @@
 <template>
   <article class="bg-white-second dark:bg-dark shadow-sm dark:shadow-xl rounded-2xl p-6 max-w-md">
-    <a href="#">
+    <a :href="articleData.URL">
       <HomeTitle titleText="Ostatni" :titleTextSmile="articleData.cardTitle"/>
       <header class="flex gap-4 w-full">
         <picture>

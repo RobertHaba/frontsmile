@@ -22,13 +22,13 @@
             class="flex w-full justify-around gap-4 border border-t-0 border-b-0 border-l-0 border-transparent pr-4 sm:w-fit"
           >
             <li
-              class="group relative duration-300 ease-in hover:text-main"
+              class="group relative duration-300 ease-in hover:font-bold"
               v-for="linkItem in linkData"
               :key="linkItem.id"
             >
               <a
                 :href="linkItem.link"
-                class="flex flex-col items-center gap-1 text-xs focus:border-b-2 focus:border-main focus:text-main focus:outline-none sm:text-base"
+                class="flex flex-col items-center gap-1 text-xs focus:border-b-2 focus:border-main focus:font-bold focus:outline-none sm:text-base"
               >
                 <span
                   class="icon h-5 w-5 opacity-70 dark:invert sm:hidden sm:opacity-100"
@@ -51,6 +51,7 @@
           <span
             class="icon icon--menu-burger h-5 w-5 opacity-70 dark:invert"
           ></span>
+          <span class="sr-only"> Otwórz menu </span>
         </button>
         <div
           class="sm:bottom-none absolute -right-full bottom-full -z-10 mb-1 flex flex-col items-center rounded-lg bg-white p-2 dark:bg-second sm:static sm:right-0 sm:z-0 sm:mb-0 sm:flex sm:flex-row sm:gap-1 sm:bg-none sm:p-0 sm:dark:bg-dark sm:dark:bg-none"
@@ -66,7 +67,9 @@
           >
             <span
               class="icon h-5 w-5 opacity-80 group-hover:opacity-100"
-              :class="[store.theme === 'light' ? 'icon--moon' : 'icon--sun invert']"
+              :class="[
+                store.theme === 'light' ? 'icon--moon' : 'icon--sun invert',
+              ]"
             >
               <span class="sr-only"
                 >Przełącz tryb na span

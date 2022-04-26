@@ -6,6 +6,8 @@ import router from './router';
 import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { DefaultApolloClient } from '@vue/apollo-composable';
 import VueLazyLoad from 'vue3-lazyload';
+
+
 const defaultClient = new ApolloClient({
   uri: 'https://frontsmile.herokuapp.com/graphql',
   cache: new InMemoryCache(),
@@ -19,7 +21,7 @@ const app = createApp({
   render() {
     return h(App);
   },
-})
-app.use(router)
+});
+app.use(router);
 app.use(VueLazyLoad);
-app.mount('#app')
+app.mount('#app');

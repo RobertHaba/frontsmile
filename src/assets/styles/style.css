@@ -1,11 +1,13 @@
 .smile-line,
-.smile-line-white {
+.smile-line-white,
+.smile-line-black {
     position: relative;
     width: fit-content;
 }
 
 .smile-line::before,
-.smile-line-white::before {
+.smile-line-white::before,
+.smile-line-black::before {
     content: '';
     position: absolute;
     top: 85%;
@@ -21,8 +23,16 @@
     background-image: url('../icons/smile-white.svg');
 }
 
+.smile-line-black::before {
+    background-image: url('../icons/smile-black.svg');
+}
+
 .icon--happy {
     background-image: url('../icons/happy.svg');
+}
+
+.icon--illustration-developer {
+    background-image: url('../icons/illustration-developer.svg');
 }
 
 .icon--html {
@@ -109,12 +119,16 @@
     background-image: url('../icons/menu-burger.svg');
 }
 
-.icon--spy {
-    background-image: url('../icons/spy.svg');
+.icon--close {
+    background-image: url('../icons/close.svg');
 }
 
-.f-animate-moving {
-    animation: moving 3s infinite;
+.icon--illustration-design {
+    background-image: url('../icons/illustration-design.png');
+}
+
+.icon--spy {
+    background-image: url('../icons/spy.svg');
 }
 
 .button-shadow {
@@ -125,12 +139,44 @@
     box-shadow: 0px 0px 8px 1px rgba(47, 50, 73, 0.5);
 }
 
+.f-animate-moving {
+    animation: moving 3s infinite;
+}
+
+.f-animate-floating {
+    animation: floating 3s infinite;
+}
+
+.f-animate-shake {
+    animation: shake 3s infinite;
+}
+
 .f-animate-slide-to-right {
     animation: slideToRight 0.5s forwards;
 }
 
 .f-animate-slide-hide-right {
     animation: slideHideToRight 0.5s forwards;
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
 }
 
 @keyframes moving {

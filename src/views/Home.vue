@@ -17,11 +17,8 @@ import Navbar from '../components/Navbar.vue';
 import HeaderSection from '../components/home/HeaderSection.vue';
 import HomeHeaderMedia from '../components/home/HomeHeaderMedia.vue';
 import HomeAbout from '../components/home/HomeAbout.vue';
-import HomeTechnology from '../components/home/HomeTechnology.vue';
-import HomeProjects from '../components/home/HomeProjects.vue';
-import HomeSocial from '../components/home/HomeSocial.vue';
-import HomeDesign from '../components/home/HomeDesign.vue';
-import HomeFooter from '../components/home/HomeFooter.vue';
+import { defineAsyncComponent } from '@vue/runtime-core';
+
 
 export default {
   components: {
@@ -29,11 +26,12 @@ export default {
     HeaderSection,
     HomeHeaderMedia,
     HomeAbout,
-    HomeTechnology,
-    HomeProjects,
-    HomeSocial,
-    HomeDesign,
-    HomeFooter
+    "HomeTechnology": defineAsyncComponent(()=> import('../components/home/HomeTechnology.vue')),
+    "HomeProjects": defineAsyncComponent(()=> import('../components/home/HomeProjects.vue')),
+    "HomeSocial": defineAsyncComponent(()=> import('../components/home/HomeSocial.vue')),
+    "HomeDesign": defineAsyncComponent(()=> import('../components/home/HomeDesign.vue')),
+    "HomeFooter": defineAsyncComponent(()=> import('../components/home/HomeFooter.vue')),
+    
   },
   setup() {
     return {};

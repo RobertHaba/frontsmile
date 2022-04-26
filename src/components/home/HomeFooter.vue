@@ -1,5 +1,5 @@
 <template>
-  <footer class="mb-16 mt-8 flex h-auto justify-center" id="contact">
+  <footer class="mb-16 mt-8 flex h-auto flex-col items-center" id="contact">
     <div
       class="container flex flex-col items-center gap-12 rounded-2xl bg-second px-4 py-12 shadow-sm dark:shadow-xl xl:p-12"
     >
@@ -147,7 +147,11 @@
           </div>
         </div>
       </div>
+      <div class="flex w-full justify-center text-white">
+        <p>Copyright © 2022 FrontSmile. All rights reserved</p>
+      </div>
     </div>
+    <HomeGeekInfo />
   </footer>
 </template>
 
@@ -155,6 +159,7 @@
 import { ref } from '@vue/reactivity';
 import { inject } from '@vue/runtime-core';
 import axios from 'axios';
+import HomeGeekInfo from './HomeGeekInfo.vue';
 
 const backendURL = inject('backendURL');
 const otherContacts = [

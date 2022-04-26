@@ -1,10 +1,10 @@
 <template>
   <section class="mt-4 flex w-full justify-center text-white">
     <div
-      class="container grid grid-rows-2 gap-8 xl:grid-cols-2 xl:grid-rows-none xl:p-4"
+      class="container flex justify-around gap-8 xl:grid-cols-2 xl:grid-rows-none xl:p-4 flex-wrap"
     >
       <div
-        class="flex w-full max-w-lg justify-self-center rounded-2xl bg-second p-8 shadow-sm dark:shadow-xl"
+        class="flex w-full h-fit max-w-lg justify-self-center rounded-2xl bg-second p-8 shadow-sm dark:shadow-xl"
         v-for="technology in technologies"
         :key="technology.id"
       >

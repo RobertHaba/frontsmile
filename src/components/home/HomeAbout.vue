@@ -42,7 +42,7 @@
             class="order-first md:col-start-2 md:row-start-1 md:row-end-3 grid md:grid-rows-5 bg-white dark:bg-dark-light rounded-2xl p-4"
           >
             <div class="bg-main w-full row-span-2 rounded-2xl">
-              <img class="rounded-2xl" v-lazy="'src/assets/img/me.jpg'" alt="Zdjęcie przedstawiające moją osobę. Uśmiech na twarzy. Delikatnie kręcone włosy ułożone do góry, boki wycieniowane od zera. Zapuszczona broda z wąsem średniej długości. " />
+              <img class="rounded-2xl" v-lazy="'https://res.cloudinary.com/frontsmile/image/upload/c_scale,w_480/v1650906752/me_wmf7o2.webp'" alt="Zdjęcie przedstawiające moją osobę. Uśmiech na twarzy. Delikatnie kręcone włosy ułożone do góry, boki wycieniowane od zera. Zapuszczona broda z wąsem średniej długości. " />
             </div>
             <div class="row-span-3 mt-4">
               <p class="font-bold">Robert Hapka</p>
