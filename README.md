@@ -1,7 +1,19 @@
-# Vue 3 + Vite
+# Water App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Water App to aplikacja do nadzorowania: poziomu nawodnienia, wypitych napojów, a także kalorii. Całość napisana jest w **Vue 3** z wykorzystaniem Composition Api, **Pinia**, **Vue Router**, **Tailwind** i **Firebase**. 
 
-## Recommended IDE Setup
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## PWA
+Aplikacja jest zgoda z wytycznymi PWA, dzięki czemu istnieje możliwość instalacji apki.
+
+## Konto testowe
+Brak - Możliwość logowania się jako gość, przez emaila lub kontem googla.
+
+## Live
+[Przetestuj](https://waterapp.haba.usermd.net/)
+  
+## Dodatki
+- **Notyfikacje** - Uzupełnianie płynów przez wyskakujące powiadomienia (aplikacja musi pozostać uruchomiona w tle), 
+- **Zmiana statycznych przycisków** - w ustawieniach aplikacji istenieje możliwość zmiany statycznych przycisków dla WaterApp i DrinkApp
+
+
