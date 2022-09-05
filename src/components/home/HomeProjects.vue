@@ -92,7 +92,7 @@
               <div class="my-4 flex h-full items-end gap-4 xl:m-0">
                 <a
                   :href="project.attributes.linkLive"
-                  class="rounded-2xl bg-second border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-none hover:text-white"
+                  class="rounded-2xl bg-second border-2 border-second p-8 py-1 text-sm text-white font-bold transition hover:bg-none hover:text-dark hover:dark:text-white"
                   aria-label="Naciśnij enter, aby otworzyć stronę"
                   ><span>Otwórz</span></a
                 >
