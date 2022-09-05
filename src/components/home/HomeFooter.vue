@@ -65,10 +65,10 @@
           </div>
           <button
             type="submit"
-            class="group flex items-center justify-center gap-2 rounded-xl border border-white px-8 py-2 text-white transition hover:animate-pulse hover:bg-white hover:text-dark"
+            class="group flex items-center justify-center gap-2 rounded-xl border border-white px-8 py-2 bg-white text-dark transition hover:animate-pulse hover:bg-white hover:text-dark"
           >
             <span
-              class="icon icon--send h-4 w-4 invert transition group-hover:invert-0"
+              class="icon icon--send h-4 w-4 invert-0 transition"
             ></span
             >Wyślij
           </button>
@@ -136,14 +136,17 @@
           </div>
           <div class="flex w-fit flex-col gap-2">
             <p>Zgubiłeś CV?</p>
-            <button
+            <a
+            href="/CV-Robert-Hapka-Frontend.pdf"
+            download="CV-Robert-Hapka-Frontend.pdf"
               class="group flex items-center justify-center gap-2 rounded-xl border border-white px-8 py-2 transition-all hover:font-bold"
+              
             >
               <span
                 class="icon icon--download h-4 w-4 invert group-hover:animate-bounce"
               ></span>
               Pobierz CV
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -172,7 +175,7 @@ const otherContacts = [
   {
     tag: 'a',
     title: 'Robert Hapka',
-    URL: 'mailto:robert@frontsmile.pl',
+    URL: 'https://www.linkedin.com/in/hapka/',
     icon: 'icon--linkedin',
   },
   {

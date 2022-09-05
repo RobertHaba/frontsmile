@@ -146,13 +146,13 @@ const iconLinkData = ref([
   {
     id: 4,
     title: 'YouTube',
-    link: 'https://github.com/RobertHaba',
+    link: 'https://www.youtube.com/channel/UCvDsnuD2lGmCdHWJyNv_G-g',
     icon: 'youtube-black',
   },
   {
     id: 4,
     title: 'Linkedin',
-    link: '#about',
+    link: 'https://www.linkedin.com/in/hapka/',
     icon: 'linkedin',
   },
   {

@@ -92,15 +92,21 @@
               <div class="my-4 flex h-full items-end gap-4 xl:m-0">
                 <a
                   :href="project.attributes.linkLive"
-                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-second hover:text-white"
+                  class="rounded-2xl bg-second border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-none hover:text-white"
                   aria-label="Naciśnij enter, aby otworzyć stronę"
-                  ><span class="opacity-80">Otwórz</span></a
+                  ><span>Otwórz</span></a
                 >
                 <a v-if="project.attributes.linkCode"
                   :href="project.attributes.linkCode"
                   class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-second hover:text-white"
                   aria-label="Naciśnij enter, aby przejść do strony z kodem"
                   ><span class="opacity-80">Kod</span></a
+                >
+                <a v-if="project.attributes.linkDesign"
+                  :href="project.attributes.linkDesign"
+                  class="rounded-2xl border-2 border-second p-8 py-1 text-sm font-bold transition hover:bg-second hover:text-white"
+                  aria-label="Naciśnij enter, aby przejść do strony z kodem"
+                  ><span class="opacity-80">Design</span></a
                 >
               </div>
             </div>
@@ -142,7 +148,7 @@ export default {
     });
     const {result} = useQuery(gql`
       query {
-        portfolios(sort:"id:asc") {
+        portfolios(sort:"pid:desc") {
           data {
             id
             attributes {
@@ -152,6 +158,8 @@ export default {
               description
               linkLive
               linkCode
+              linkDesign
+              pid
               img{
                 data{
                   attributes{

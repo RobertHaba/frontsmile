@@ -1,13 +1,27 @@
 <template>
   <section class="xl:p-8 mt-8 flex justify-center" id="about">
     <div
-      class="container grid w-full grid-rows-auto xl:grid-rows-1 xl:grid-cols-2 px-8 py-12 gap-8 bg-white-second dark:bg-dark rounded-2xl shadow-sm dark:shadow-xl"
+      class="
+        container
+        grid
+        w-full
+        grid-rows-auto
+        xl:grid-rows-1 xl:grid-cols-2
+        px-8
+        py-12
+        gap-8
+        bg-white-second
+        dark:bg-dark
+        rounded-2xl
+        shadow-sm
+        dark:shadow-xl
+      "
     >
       <div class="w-full max-w-lg justify-self-center">
         <HomeTitle titleTextSmile="O mnie" />
         <p class="opacity-80">
           Hej, tu <span>Haba</span>👋! <br />
-          Na wstępie powiem, że pracuje w serwisie komputerowym i zostałem
+          Na wstępie powiem, że zostałem
           wylosowany przez życie na darmowego rodzinnego informatyka 😐 <br />
           Oczywiście będąc dumnym Technikiem Informatykiem 🦸 nie mogłem
           zaprzestać tylko na serwisie, więc postanowiłem zagłębiać techniki UI,
@@ -35,19 +49,36 @@
         <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 gap-4">
           <div class="bg-white dark:bg-dark-light rounded-2xl p-4">
             <h3 class="mb-4 font-bold">Doświadczenie</h3>
-            <p class="opacity-80 text-sm font-bold">Serwisman.com - Serwisant</p>
-            <p class="opacity-80 text-sm">2019 - aktualnie</p>
+            <p class="opacity-80 text-sm font-bold">
+              Serwisman.com - Specjalista zastosowań informatyki
+            </p>
+            <p class="opacity-80 text-sm">04.2019 - 08.2022</p>
           </div>
           <div
-            class="order-first md:col-start-2 md:row-start-1 md:row-end-3 grid md:grid-rows-5 bg-white dark:bg-dark-light rounded-2xl p-4"
+            class="
+              order-first
+              md:col-start-2 md:row-start-1 md:row-end-3
+              grid
+              md:grid-rows-5
+              bg-white
+              dark:bg-dark-light
+              rounded-2xl
+              p-4
+            "
           >
             <div class="bg-main w-full row-span-2 rounded-2xl">
-              <img class="rounded-2xl" v-lazy="'https://res.cloudinary.com/frontsmile/image/upload/c_scale,w_480/v1650906752/me_wmf7o2.webp'" alt="Zdjęcie przedstawiające moją osobę. Uśmiech na twarzy. Delikatnie kręcone włosy ułożone do góry, boki wycieniowane od zera. Zapuszczona broda z wąsem średniej długości. " />
+              <img
+                class="rounded-2xl"
+                v-lazy="
+                  'https://res.cloudinary.com/frontsmile/image/upload/c_scale,w_480/v1660927435/frontsmile-yellow_difjqs.png'
+                "
+                alt="Zdjęcie przedstawiające moją osobę. Uśmiech na twarzy. Delikatnie kręcone włosy ułożone do góry, boki wycieniowane od zera. Zapuszczona broda z wąsem średniej długości. "
+              />
             </div>
             <div class="row-span-3 mt-4">
               <p class="font-bold">Robert Hapka</p>
               <ul>
-                <li><p class="opacity-80">Wiek: 23 lata</p></li>
+                <li><p class="opacity-80">Wiek: 24 lata</p></li>
                 <li><p class="opacity-80">Województwo: Pomorskie</p></li>
               </ul>
             </div>
@@ -60,22 +91,66 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-wrap gap-6 sm:gap-4 justify-center sm:justify-between mt-8 ">
+        <div
+          class="
+            flex flex-wrap
+            gap-6
+            sm:gap-4
+            justify-center
+            sm:justify-between
+            mt-8
+          "
+        >
           <a
-            href="#"
-            class="flex items-center gap-4 w-fit px-8 py-2 bg-second text-white rounded-xl hover:animate-pulse"
+            href="/CV-Robert-Hapka-Frontend.pdf"
+            download="CV-Robert-Hapka-Frontend.pdf"
+            class="
+              flex
+              items-center
+              gap-4
+              w-fit
+              px-8
+              py-2
+              bg-second
+              text-white
+              rounded-xl
+              hover:animate-pulse
+            "
           >
             <span
-              class="w-4 h-4 icon icon--download invert group-hover:animate-bounce"
+              class="
+                w-4
+                h-4
+                icon icon--download
+                invert
+                group-hover:animate-bounce
+              "
             ></span
             >Pobierz CV</a
           >
           <a
             href="#contact"
-            class="flex items-center gap-4 w-fit px-8 py-2 border border-dark dark:border-white dark:text-white rounded-xl hover:animate-pulse"
+            class="
+              flex
+              items-center
+              gap-4
+              w-fit
+              px-8
+              py-2
+              border border-dark
+              dark:border-white dark:text-white
+              rounded-xl
+              hover:animate-pulse
+            "
           >
             <span
-              class="w-4 h-4 icon icon--briefcase dark:invert  group-hover:animate-bounce"
+              class="
+                w-4
+                h-4
+                icon icon--briefcase
+                dark:invert
+                group-hover:animate-bounce
+              "
             ></span
             >Skontaktuj się</a
           >
@@ -86,7 +161,7 @@
 </template>
 
 <script>
-import HomeTitle from './HomeTitle.vue';
+import HomeTitle from "./HomeTitle.vue";
 HomeTitle;
 export default {
   components: {

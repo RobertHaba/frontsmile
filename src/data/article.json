@@ -11,9 +11,9 @@
     }, {
         "id": 1,
         "cardTitle": "filmik",
-        "title": "Od Bejbika do Juniora - RocketOS w wersji BETA #3",
-        "shortDescription": "System RocketOS dostępny do testu 🥳 Czym jest RocketOS? 🤔 Jest to aplikacja napisana w Vue imitująca system operacyjny, która działa w trybie online. Główna zaleta to możliwość używania jednego konta na wielu urządzeniach z zachowaniem danych.",
-        "tags": "HTML, CSS, JS, Vue, FireBase",
+        "title": "BEM w 60 sekund - Dlaczego warto korzystać w projektach?",
+        "shortDescription": "Hej! 👋 W dzisiejszym shorcie opowiem Ci jak uporać się z nazewnictwem klas w HTML/CSS. Poznasz jedną z najpopularniejszych metodologii - BEM. Wprowadzając ten styl, pisanie, zarządzanie i wprowadzanie zmian w projektach będzie dla Ciebie jeszcze prostsze 🤭.",
+        "tags": "HTML, CSS, BEM",
         "URL": "https://www.youtube.com/shorts/0tWyECHXMQE",
         "thumbnail": "https://res.cloudinary.com/frontsmile/image/upload/v1650886271/thumbnail_bem_a10eab4a06.png"
 
